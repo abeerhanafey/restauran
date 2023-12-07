@@ -1,0 +1,1329 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Nunito",sans-serif;
+}
+
+.main-page {
+    padding: 0 5%;
+    background-color: aliceblue;
+}
+
+/* start header  */
+.main-page .header {
+    width: 100%;
+    background-image: url(../img/bg-hero.jpg);
+    background-size: 100% 100%;
+}
+
+.main-page .header .bg {
+    width: 100%;
+    background-image: radial-gradient(rgba(1, 0, 25, 0.8), rgba(0, 0, 67, 0.7) );
+}
+
+.main-page .header .bg .navbar {
+    width: 90%;
+    background-color: rgba(1, 1, 41, 0.923);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 3%;
+    position: fixed;
+    z-index: 100;
+}
+
+.main-page .header .bg .navbar .logo {
+    width: 30%; 
+    color: rgb(239, 126, 45);
+    font-size: 40px;
+}
+
+.main-page .header .bg .navbar .nav-list {
+    width: 60%;
+}
+
+.main-page .header .bg .navbar ul li a {
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+
+.main-page .header .bg .navbar ul li .a:hover, 
+.main-page .header .bg .navbar ul li .home {
+    color: rgb(239, 126, 45);
+    font-size: 20px;
+}
+
+.main-page .header .bg .navbar ul li.button {
+    background-color: rgb(239, 126, 45);
+    padding: 7px 15px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    margin-top: -10px;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+
+.main-page .header .bg .navbar ul li.button:hover { 
+    background-color: rgb(246, 142, 67);
+    color: aliceblue ;
+}
+
+.main-page .header .bg .navbar ul li {
+    list-style-type: none;
+}
+
+.main-page .header .bg .navbar ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-page .header .bg .navbar ul li.pages {
+    position: relative;
+}
+
+.main-page .header .bg .navbar ul li.pages div {
+    width: 150px;
+    height: 130px;
+    background-color: aliceblue;
+    border: 1px solid #555;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0 10px;
+    position: absolute;
+    top: 30px;
+    display: none;
+    z-index: 100;
+}
+
+.main-page .header .bg .navbar ul li.pages:hover div {
+    display: flex;
+}
+
+.main-page .header .bg .navbar ul li.pages div a {
+    color: #444;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.main-page .header .bg .navbar ul li.pages div a:hover {
+    transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    -o-transform: scale(1.3);
+    background-color: aliceblue;
+    padding: 5px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.main-page .header .bg .navbar ul li.pages .a::after {
+    content: "";
+    width: 0px;
+    border: 7px solid white;
+    border-color: white transparent transparent transparent;
+    position: absolute;
+    top: 7px;
+    left: 60px;
+}
+
+.main-page .header .bg .navbar ul li.pages:hover .a::after {
+    border-color: rgb(239, 126, 45) transparent transparent transparent;
+    left: 63px;
+}
+
+.header .bg .banner {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 5%;
+    padding-top: 200px;
+}
+
+.header .bg .banner .left {
+    width: 45%;
+    color: aliceblue;
+    text-align: left;
+}
+
+.header .bg .banner .left h1 {
+    font-size: 5vw;
+}
+
+.header .bg .banner .left p {
+    margin: 20px 0 50px 0;
+}
+
+.header .bg .banner .left a {
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 22px;
+    background-color: rgb(239, 126, 45);
+    padding: 15px 25px;
+}
+
+.header .bg .banner .right {
+    width: 50%;
+}
+
+.header .bg .banner .right img {
+    width: 100%;
+    animation-name: turning_the_plate;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.header .bg .banner .right img:hover {
+    animation-play-state: paused;
+}
+
+.navbar input {
+    display: none;
+}
+
+@keyframes turning_the_plate {
+    to {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+}
+}
+
+.navbar i.fa-bars {
+    color: #777;
+    font-size: 30px;
+    border: 2px solid #777;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    padding: 5px 9px;
+    display: none;
+}
+/* end header  */
+/* --------------------------------------- */
+
+/* start service  */
+.main-page .service {
+    width: 100%;
+    background-color: #eee;
+    padding: 3%;
+}
+
+.main-page .service .cards {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.main-page .service .cards .card1 {
+    width: 24%;
+    background-color: white;
+    padding: 3%;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    box-shadow: 2px 2px 5px wheat;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+
+.main-page .service .cards .card1:hover {
+    background-color: rgb(239, 126, 45);
+    color: aliceblue;
+}
+
+.main-page .service .cards .card1:hover i {
+    color: aliceblue;
+}
+
+.main-page .service .cards .card1:hover p {
+    color: aliceblue;
+}
+
+.main-page .service .cards .card1 i {
+    color: rgb(239, 126, 45);
+    margin-bottom: 10px;
+}
+
+.main-page .service .cards .card1 p {
+    color: #555;
+    margin-top: 10px;
+}
+/* end service  */
+/* ----------------------------------------- */
+
+/* start about  */
+.main-page .about {
+    background-color: #eee;
+    display: flex;
+    justify-content: space-between;
+    padding: 3%;
+    padding-top: 50px;
+}
+
+.main-page .about .galarey {
+    width: 50%;
+}
+
+.main-page .about .galarey .buttom-img {
+    display: flex;
+    justify-content: end;
+    align-items: flex-start;
+    gap: 13px;
+    padding-right: 4%;
+}
+
+.main-page .about .galarey .top-img img:first-child {
+    width: 45%;
+    margin-right: 10px;
+}
+
+.main-page .about .galarey .top-img img:nth-child(2) {
+    width: 35%;
+}
+
+.main-page .about .galarey .buttom-img img:first-child {
+    width: 35%;
+}
+
+.main-page .about .galarey .buttom-img img:nth-child(2) {
+    width: 45%;
+}
+
+.main-page .about .about-us {
+    width: 50%;
+    padding: 10px 30px;
+}
+
+.main-page .about .about-us .title {
+    width: 27%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-page .about .about-us .title h3 {
+    font-family: 'Pacifico', cursive;
+    font-size: 25px;
+    color: rgb(239, 126, 45);
+}
+
+.main-page .about .about-us .title .horizontal-line {
+    width: 60px;
+    height: 3px;
+    background-color: rgb(239, 126, 45);
+    margin-top: 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.main-page .about .about-us h2 {
+    font-size: 40px;
+    margin: 20px 0;
+}
+
+.main-page .about .about-us h2 i {
+    color: rgb(239, 126, 45);
+    font-size: 40px;
+}
+
+.main-page .about .about-us p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.main-page .about .about-us .data .left,
+.main-page .about .about-us .data .right{
+    width: 40%;
+    margin-bottom: 20px;
+}
+
+.main-page .about .about-us .data,
+.main-page .about .about-us .data .left,
+.main-page .about .about-us .data .right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-page .about .about-us .data .vertical-line {
+    width: 7px;
+    height: 80px;
+    background-color: rgb(239, 126, 45);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.main-page .about .about-us .data h2 {
+    font-size: 50px;
+    color: rgb(239, 126, 45);
+}
+
+.main-page .about .about-us .button {
+    text-decoration: none;
+    font-size: 25px;
+    color: #fff;
+    background-color: rgb(239, 126, 45);
+    padding: 10px 30px;
+}
+/* end about  */
+/* --------------------------------------------- */
+ /* start menu section   */
+ .main-page .menu-section {
+    width: 100%;
+    background-color: #eee;
+    padding: 50px 3%;
+    text-align: center;
+}
+
+.main-page .menu-section .title {
+    display: flex;
+    justify-content: center;
+}
+
+.main-page .menu-section .title .h-line {
+    width: 50px;
+    height: 3px;
+    background-color: rgb(239, 126, 45);
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    margin: 20px;
+}
+
+.main-page .menu-section .title h3 {
+    font-family: 'Pacifico', cursive;
+    font-size: 25px;
+    color: rgb(239, 126, 45);
+}
+
+.main-page .menu-section h2 {
+    font-size: 40px;
+    margin: 20px 0;
+}
+
+.main-page .menu-section .sections {
+    width: 50%;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    border-bottom: 1px solid #999;
+}
+
+.main-page .menu-section .sections .one {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 20px;
+    transition:  1s;
+    -webkit-transition:  1s;
+    -moz-transition:  1s;
+    -ms-transition:  1s;
+    -o-transition:  1s;
+}
+
+.main-page .menu-section .sections .one:hover {
+    border-bottom: 4px solid rgb(239, 126, 45);
+}
+
+.main-page .menu-section .sections .one i {
+    color: rgb(239, 126, 45);
+}
+
+.main-page .menu-section .sections .one p {
+    color: #777;
+}
+
+.main-page .menu-section .menu {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 50px;
+}
+
+.main-page .menu-section .menu .meal {
+    width: 100%;
+    display: flex;
+}
+
+.main-page .menu-section .menu .meal .desc {
+    width: 100%;
+}
+
+.main-page .menu-section .menu .meal .desc .price {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: -15px;
+}
+
+.main-page .menu-section .menu .meal .desc .price h2 {
+    font-size: 21px;
+}
+
+.main-page .menu-section .menu .meal .desc .price h2:nth-child(2) {
+    color: rgb(239, 126, 45);
+}
+
+.main-page .menu-section .menu .meal  img {
+    margin-right: 20px;
+    border: 1px solid rgba(1, 0, 25, 0.8);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+} 
+
+.main-page .menu-section .menu .meal .desc p {
+    color: #777;
+}
+ /* end menu section   */
+/* --------------------------------------------- */
+/* start booking section  */
+.main-page .booking-section {
+    width: 100%;
+    background-color: rgba(1, 1, 41, 0.923);
+    display: flex;
+}
+
+.main-page .booking-section .vid {
+    width: 50%;
+    position: relative;
+    height: 75vh;
+}
+
+.main-page .booking-section .vid img {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+}
+
+.main-page .booking-section .vid .btn-bg {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(239, 126, 45);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    -webkit-transform: translate(-50%, 50%);
+    -moz-transform: translate(-50%, 50%);
+    -ms-transform: translate(-50%, 50%);
+    -o-transform: translate(-50%, 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-page .booking-section .vid .btn-bg button {
+    border-width: 20px 30px;
+    border-color: rgb(239, 126, 45) rgb(239, 126, 45) rgb(239, 126, 45) rgba(1, 1, 41, 0.923);
+    border-style: solid;
+    margin-left: 30%;
+}
+
+.main-page .booking-section .vid .btn-bg-animation {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(239, 126, 45);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) scale(1.5);
+    -webkit-transform: translateX(-50%) translateY(-50%) scale(1.5);
+    -moz-transform: translateX(-50%) translateY(-50%) scale(1.5);
+    -ms-transform: translateX(-50%) translateY(-50%) scale(1.5);
+    -o-transform: translateX(-50%) translateY(-50%) scale(1.5);
+    opacity: 1;
+    animation-name: btn-scale;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes btn-scale {
+    to {
+        transform: scale(1) translateX(-50%) translateY(-50%);
+        opacity: 0;
+        -webkit-transform: scale(1) translateX(-50%) translateY(-50%);
+        -moz-transform: scale(1) translateX(-50%) translateY(-50%);
+        -ms-transform: scale(1) translateX(-50%) translateY(-50%);
+        -o-transform: scale(1) translateX(-50%) translateY(-50%);
+}
+}
+
+.main-page .booking-section .booking {
+    padding: 2% 4%;
+    width: 50%;
+}
+
+.main-page .booking-section .booking .title {
+    display: flex;
+}
+
+.main-page .booking-section .booking .title h3 {
+    font-family: 'Pacifico', cursive;
+    font-size: 25px;
+    color: rgb(239, 126, 45);
+}
+
+.main-page .booking-section .booking .title .h-line {
+    width: 70px;
+    height: 3px;
+    background-color: rgb(239, 126, 45);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    margin-top: 25px;
+    margin-left: 16px;
+}
+
+.main-page .booking-section .booking h2 {
+    font-size: 40px;
+    color: #fff;
+}
+
+.main-page .booking-section .booking .form {
+    width: 100%;
+}
+
+.main-page .booking-section .booking .form form {
+    width: 100%;
+}
+
+.main-page .booking-section .booking .form form input,
+.main-page .booking-section .booking .form form select {
+    width: 47%;
+    height: 9vh;
+    margin: 0 12px 15px 0;
+    padding: 15px;
+    font-size: 17px;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+}
+
+.main-page .booking-section .booking .form form textarea {
+    width: 98%;
+    height: 15vh;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    font-size: 18px;
+    padding: 15px;
+}
+
+.main-page .booking-section .booking .form form input[type="submit"] {
+    width: 98%;
+    background-color: rgb(239, 126, 45);
+    color: #fff;
+    margin-top: 15px;
+}
+/* end booking section  */
+/* --------------------------------------------- */
+/* start team section */
+.main-page .team-section {
+    width: 100%;
+    background-color: #eee;
+    padding: 9vh 3%;
+    text-align: center;
+}
+
+.main-page .team-section .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-page .team-section .title .h-line {
+    width: 50px;
+    height: 2px;
+    background-color: rgb(239, 126, 45);
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    margin: 20px;
+}
+
+.main-page .team-section .title h3 {
+    font-family: 'Pacifico', cursive;
+    font-size: 22px;
+    color: rgb(239, 126, 45);
+}
+
+.main-page .team-section h2 {
+    font-size: 40px;
+    margin: 20px 0;
+}
+
+.main-page .team-section .teams-member {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.main-page .team-section .teams-member .member {
+    width: 23%;
+    text-align: center;
+}
+
+.main-page .team-section .teams-member .member .one {
+    width: 100%;
+    background-color: #fff;
+    overflow: hidden;
+    padding: 10px 0;
+    border-radius: 15px 15px 0 0;
+    -webkit-border-radius: 15px 15px 0 0;
+    -moz-border-radius: 15px 15px 0 0;
+    -ms-border-radius: 15px 15px 0 0;
+    -o-border-radius: 15px 15px 0 0;
+}
+
+.main-page .team-section .teams-member .member .img {
+    width: 80%;
+    margin: 25px auto;
+    overflow: hidden;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.main-page .team-section .teams-member .member .img img {
+    width: 100%;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+
+.main-page .team-section .teams-member .member h3 {
+    font-size: 22px;
+}
+
+.main-page .team-section .teams-member .member p {
+    color: #777;
+    margin: 7px 0;
+}
+
+.main-page .team-section .teams-member .member .icons {
+    width: 100%;
+    background-color: #fff;
+    overflow: hidden;
+    padding-top: 10px;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    transform-origin: top center;
+    transform: rotateX(90deg);
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    -ms-transform: rotateX(90deg);
+    -o-transform: rotateX(90deg);
+}
+
+.main-page .team-section .teams-member .member .icons i {
+    width: 45px;
+    height: 70px;
+    background-color: rgb(239, 126, 45);
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    font-size: 20px;
+    color: #fff;
+    padding: 15px 10px;
+    margin-right: 10px;
+    margin-bottom: -25px;
+}
+
+.main-page .team-section .teams-member .member:hover .one .img img {
+    transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    -o-transform: scale(1.3);
+}
+
+.main-page .team-section .teams-member .member:hover .icons {
+    transform: rotateX(0deg);
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+}
+/* end team section */
+/* --------------------------------------------- */
+/* start testimonial section  */
+.main-page .testimonial {
+    background-color: #eee;
+    padding: 7vh 3%;
+    text-align: center;
+}
+
+.main-page .testimonial .title {
+    display: flex;
+    justify-content: center;
+}
+
+.main-page .testimonial .title .h-line {
+    width: 70px;
+    height: 3px;
+    background-color: rgb(239, 126, 45);
+    margin: 20px 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.main-page .testimonial .title h3 {
+    color: rgb(239, 126, 45);
+    font-family: 'Pacifico', cursive;
+    font-size: 25px;
+}
+
+.main-page .testimonial h2 {
+    font-size: 50px;
+}
+
+.main-page .testimonial .cards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.main-page .testimonial .cards .card {
+    width: 32%;
+    text-align: left;
+    border: 1px solid #aaa;
+    padding: 20px 25px;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+
+.main-page .testimonial .cards .card .client {
+    display: flex;
+    margin: 20px 0 0 0;
+    gap: 20px;
+    align-items: center;
+}
+
+.main-page .testimonial .cards .card i {
+    font-size: 50px;
+    color: rgb(239, 126, 45);
+}
+
+.main-page .testimonial .cards .card p {
+    color: #777;
+}
+
+.main-page .testimonial .cards .card .client img {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    width: 70px;
+    height: 70px;
+}
+
+.main-page .testimonial .cards .card:hover {
+    color: #fff;
+    background-color: rgb(239, 126, 45);
+    border: none;
+}
+
+.main-page .testimonial .cards .card:hover i {
+    color: #fff;
+}
+
+.main-page .testimonial .cards .card:hover p {
+    color: #fff;
+}
+/* end testimonial section  */
+/* --------------------------------------------- */
+/* start footer  */
+.main-page .footer {
+    background-color: rgba(1, 1, 41, 0.923);
+    padding: 10vh 3% 20px;
+    color: #fff;
+}
+
+.main-page .footer .top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.main-page .footer .top .container {
+    width: 25%;
+
+}
+
+.main-page .footer .top .container .title {
+    display: flex;
+}
+
+.main-page .footer .top .container .title h2 {
+    color: rgb(239, 126, 45);
+    font-family: 'Pacifico', cursive;
+    font-size: 25px;
+}
+
+.main-page .footer .top .container .title .h-line {
+    width: 50px;
+    height: 3px;
+    background-color: rgb(239, 126, 45);
+    margin: 25px 15px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.main-page .footer .top .company ul li {
+    list-style-type: none;
+    margin-top: 10px;
+    
+}
+
+.main-page .footer .top .company ul li::before {
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+.main-page .footer .top .contact p {
+    margin-top: 15px;
+}
+
+.main-page .footer .top .contact p i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.main-page .footer .top .contact .icons {
+    display: flex;
+    margin-top: 15px;
+    gap: 5px;
+}
+
+.main-page .footer .top .contact .icons i {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-page .footer .top .opening p {
+    font-size: 20px;
+    margin-top: 12px;
+}
+
+.main-page .footer .top .newsLetter .input {
+    background-color: #fff;
+    width: 98%;
+    height: 10vh;
+    padding: 1px;
+    margin-top: 20px;
+    border: 2px solid rgba(239, 126, 45, 0.84);
+}
+
+.main-page .footer .top .newsLetter .input form {
+    display: flex;
+    align-items: center;
+}
+
+.main-page .footer .top .newsLetter .input input[type="text"] {
+    width: 68%;
+    height: 9vh;
+    border-color: transparent;
+    padding: 15px;
+    font-size: 18px;
+}
+
+.main-page .footer .top .newsLetter .input input[type="submit"] {
+    width: 29%;
+    height: 7vh;
+    background-color: rgb(239, 126, 45);
+    color: #fff;
+    font-size: 17px;
+    border-color: transparent;
+}
+
+.main-page .footer hr {
+    border: 0.1px solid #ffffff36;
+    margin: 50px 0;
+}
+
+.main-page .footer .bottom p a {
+    color: #fff;
+    /* text-decoration: none; */
+    margin: 5px;
+    font-family: 'Pacifico', cursive;
+}
+
+.main-page .footer .bottom p a:hover {
+    color: rgb(239, 126, 45);
+    font-size: 18px;
+}
+
+.main-page .footer .bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-page .footer .bottom ul {
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-page .footer .bottom ul li {
+    list-style-type: none;
+}
+
+.arrow {
+    width: 60px;
+    height: 70px;
+    background-color: rgb(239, 126, 45);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    position: fixed;
+    bottom: 5vh;
+    right: 2%;
+}
+
+.arrow a {
+    font-size: 40px;
+    color: #fff;
+}
+
+/* end footer  */
+/* --------------------------------------------- */
+/*  media query  */
+
+@media (max-width: 1250px) {
+    .main-page .header .bg .navbar .nav-list {
+        width: 70%;
+    }
+
+    .main-page .header .bg .navbar .nav-list ul li a {
+        font-size: 15px;
+    }
+
+    .main-page .header .bg .navbar ul li.pages .a::after {
+        left: 55px;
+    }
+
+    .main-page .booking-section .booking .form form input,
+    .main-page .booking-section .booking .form form select {
+        width: 100%;
+        height: 6vh;
+        padding: 0 15px;
+    }
+    .main-page .booking-section .booking .form form textarea {
+        width: 100%;
+        height: 10vh;
+    }
+}
+
+@media (max-width: 1000px) {
+    .main-page .header .bg .navbar .logo {
+        width: 70%;
+    }
+    .header .bg .banner {
+        flex-direction: column;
+        gap: 100px;
+    }
+
+    .header .bg .banner .left,
+    .header .bg .banner .right {
+        width: 80%;
+    }
+
+    .header .bg .navbar {
+        flex-wrap: wrap;
+        height: 15vh;
+    }
+
+    .main-page .header .bg .navbar .nav-list {
+        width: 100%;
+        padding: 30px;
+        margin-top: 20px;
+        border-radius: 0 0 10px 0;
+        box-shadow: 5px 5px 20px rgb(239, 126, 45);
+        transform: rotateX(90deg);
+        -webkit-transform: rotateX(90deg);
+        -moz-transform: rotateX(90deg);
+        -ms-transform: rotateX(90deg);
+        -o-transform: rotateX(90deg);
+        transform-origin: top center;
+        transition: transform 1s;
+        background-color: rgba(1, 1, 41, 0.923);
+        -webkit-transition: transform 1s;
+        -moz-transition: transform 1s;
+        -ms-transition: transform 1s;
+        -o-transition: transform 1s;
+        -webkit-border-radius: 0 0 10px 0;
+        -moz-border-radius: 0 0 10px 0;
+        -ms-border-radius: 0 0 10px 0;
+        -o-border-radius: 0 0 10px 0;
+}
+
+.header .bg .navbar input:checked ~ .nav-list {
+    transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+}
+
+.header .bg .navbar input:checked ~ label i  {
+    border-width: 4px;
+}
+
+    .header .bg .nav-list ul {
+        flex-direction: column;
+}
+
+    .header .bg .nav-list ul li {
+        margin: 12px 0;
+    }
+
+    .navbar i.fa-bars {
+        display: block;
+    }
+
+    .main-page .service .cards .card1{
+        width: 48%;
+        margin-bottom: 30px;
+    }
+
+    .main-page .about {
+        flex-direction: column;
+    }
+
+    .main-page .about .galarey,
+    .main-page .about .about-us {
+        width: 100%;
+    }
+
+    .main-page .menu-section .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .main-page .menu-section .menu .meal {
+        width: 100%;
+        margin: auto;
+    } 
+
+    .main-page .menu-section .menu .meal .desc {
+        width: 80%;
+    }
+
+    .main-page .booking-section {
+        flex-direction: column;
+    }
+
+    .main-page .booking-section .vid ,
+    .main-page .booking-section .booking {
+        width: 100%;
+    }
+
+    .main-page .team-section .teams-member .member {
+        width: 48%;
+        margin-bottom: 20px;
+    }
+
+    .main-page .testimonial .title h3 {
+        font-size: 20px;
+    }
+
+    .main-page .testimonial h2 {
+        font-size: 30px;
+    }
+
+    .main-page .testimonial .cards .card {
+        width: 98%;
+        margin-bottom: 30px;
+    }
+} 
+
+@media (max-width: 600px) {
+    .header .bg .banner p {
+        font-size: 14px;
+    }
+
+    .header .bg .banner .left a {
+        font-size: 18px;
+        padding: 7px 10px;
+    }
+
+    .main-page .service .cards .card1{
+        width: 98%;
+    }
+
+    .main-page .about .about-us .title {
+        width: 40%;
+    }
+    .main-page .about .about-us h2 {
+        font-size: 30px;
+    }
+    .main-page .about .about-us p {
+        font-size: 15px;
+    }
+    .main-page .about .about-us .data .vertical-line {
+        width: 5px;
+        height: 60px;
+    }
+    .main-page .about .about-us .data h2 {
+        font-size: 35px;
+    }
+    .main-page .about .about-us .data h3 {
+        font-size: 16px;
+    }
+
+    .main-page .about .about-us .button {
+        font-size: 20px;
+        padding: 7px 20px;
+    }
+
+    .main-page .menu-section .title h3 {
+        font-size: 20px;
+    }
+
+    .main-page .menu-section h2 {
+        font-size: 30px;
+    } 
+
+    .main-page .menu-section .sections {
+        gap: 20px;
+    }
+    .main-page .menu-section .sections .one i {
+        font-size: 20px;
+    }
+
+    .main-page .menu-section .sections .one p {
+        font-size: 14px;
+    }
+
+    .main-page .menu-section .sections .one h3 {
+        font-size: 17px;
+    } 
+
+    .main-page .booking-section .vid {
+        height: 40vh;
+    }
+
+    .main-page .booking-section .booking h2 {
+        font-size: 30px;
+    }
+
+    .main-page .team-section .teams-member .member {
+        width: 96%;
+    }
+
+    .main-page .team-section h2 {
+        font-size: 30px;
+    }
+}
+
